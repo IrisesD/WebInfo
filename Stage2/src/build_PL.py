@@ -9,9 +9,9 @@ PostingList = [0]
 WordMap = {}
 PL_word_num = 0
 
-filename='../data/data.json'
-create_PL_file_path='../data/PostingList.json'
-create_WordMap_file_path='../data/WordMap.json'
+filename='data/data.json'
+create_PL_file_path='data/PostingList.json'
+create_WordMap_file_path='data/WordMap.json'
 
 with open(filename,encoding='utf-8') as f:
     json_data=json.load(f)

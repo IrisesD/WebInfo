@@ -1,8 +1,8 @@
 import jieba
 import synonyms
 
-stop_file="../dict/cn_stopwords.txt"
-add_word_file="../dict/add_word_list.txt"
+stop_file="dict/cn_stopwords.txt"
+add_word_file="dict/add_word_list.txt"
 
 class Sparse:
     def __init__(self,text):

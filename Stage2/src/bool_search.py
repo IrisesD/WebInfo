@@ -5,9 +5,9 @@ import json
 3.输出相关信息
 '''
 #----<set file path>----
-postinglist_path = '../data/PostingList.json'
-wordmap_path = '../data/WordMap.json'
-doc_path = '../data/data.json'
+postinglist_path = 'data/PostingList.json'
+wordmap_path = 'data/WordMap.json'
+doc_path = 'data/data.json'
 
 class Searcher:
     def __init__(self):
