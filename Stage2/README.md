@@ -44,9 +44,9 @@ python bool_search.py
 
 以下为实际效果。
 去除前：
-![[jieba-full-mode.png]]
+![[jieba-full-mode.png]](./img/jieba-full-mode.png)
 去除后：
-![[rm-stop-words.png]]
+![[rm-stop-words.png]](./img/rm-stop-words.png)
 可以看到，如“了”、“下”等停用词被剔除。
 
 ##### ；去除重复、同义词
@@ -60,7 +60,7 @@ python bool_search.py
 1. 建立：先对得到的词进行map映射，每个词有自己的`word_id`，将相关文档的id附在`PostingList[word_id]`上。
 2. 压缩：采用了间距代替。
 效果如下：
-![[postingList.png]]
+![[postingList.png]](./img/postingList.png)
 
 ## # 3.bool查询
 1. 载入文件
@@ -95,13 +95,13 @@ TOP250电影相关的有12、15、61、112、115、161、212、215
 215 - 《青蛇》：”奇幻“，”剧情“，”南宋“
 
 搜索”飞船 OR ( 剧情 AND 广告 ）“
-![[search-1.png]]
+![[search-1.png]](./img/search-1.png)
 得到《机器人总动员》和《三块广告牌》
 
 搜索”森林 AND 奇幻 OR 女朋友“
-![[search-2.png]]
+![[search-2.png]](./img/search-2.png)
 得到《幽灵公主》
 
 搜索”剧情 AND NOT (翻天覆地 OR 初恋 OR 俱乐部)“
-![[search-3.png]]
+![[search-3.png]](./img/search-3.png)
 得到《小森林》和《青蛇》
