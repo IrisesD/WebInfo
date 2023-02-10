@@ -1,0 +1,93 @@
+2023-02-10 20:59:01,232 - root - INFO - Namespace(KG_embedding_type='TransR', Ks='[5, 10]', aggregation_type='lightgcn', cf_batch_size=1024, cf_l2loss_lambda=0.0001, cf_print_every=1, cuda=False, data_dir='data/', data_name='Douban', embed_dim=32, evaluate_every=10, gpu_id=0, kg_batch_size=2048, kg_l2loss_lambda=1e-05, kg_print_every=1, laplacian_type='random-walk', lr=0.001, mess_dropout=0.1, n_epoch=10, n_layers=2, pretrain_model_path='trained_model/GNN_based.pth', relation_dim=32, save_dir='trained_model/Douban/GNN_based/nlayer2_dim32_TransR_lightgcn', seed=2022, stopping_steps=10, test_batch_size=2048, use_pretrain=0)
+2023-02-10 20:59:01,232 - root - INFO - Running on cpu
+2023-02-10 20:59:24,693 - root - INFO - n_users:           447
+2023-02-10 20:59:24,693 - root - INFO - n_items:           578
+2023-02-10 20:59:24,693 - root - INFO - n_entities:        18134
+2023-02-10 20:59:24,693 - root - INFO - n_users_entities:  18581
+2023-02-10 20:59:24,693 - root - INFO - n_relations:       450
+2023-02-10 20:59:24,693 - root - INFO - n_cf_train:        41830
+2023-02-10 20:59:24,693 - root - INFO - n_cf_test:         10840
+2023-02-10 20:59:24,693 - root - INFO - n_kg_train:        351986
+2023-02-10 20:59:25,711 - root - INFO - GNN_based(
+  (entity_user_embed): Embedding(18581, 32)
+  (relation_embed): Embedding(450, 32)
+  (aggregator_layers): ModuleList(
+    (0): Aggregator(
+      (message_dropout): Dropout(p=0.1, inplace=False)
+      (activation): LeakyReLU(negative_slope=0.01)
+    )
+    (1): Aggregator(
+      (message_dropout): Dropout(p=0.1, inplace=False)
+      (activation): LeakyReLU(negative_slope=0.01)
+    )
+  )
+)
+2023-02-10 20:59:25,858 - root - INFO - CF Training: Epoch 0001 Iter 0001 / 0041 | Time 0.1s | Iter Loss 0.7249 | Iter Mean Loss 0.7249
+2023-02-10 20:59:25,982 - root - INFO - CF Training: Epoch 0001 Iter 0002 / 0041 | Time 0.1s | Iter Loss 0.6969 | Iter Mean Loss 0.7109
+2023-02-10 20:59:26,114 - root - INFO - CF Training: Epoch 0001 Iter 0003 / 0041 | Time 0.1s | Iter Loss 0.7134 | Iter Mean Loss 0.7117
+2023-02-10 20:59:26,246 - root - INFO - CF Training: Epoch 0001 Iter 0004 / 0041 | Time 0.1s | Iter Loss 0.7040 | Iter Mean Loss 0.7098
+2023-02-10 20:59:26,378 - root - INFO - CF Training: Epoch 0001 Iter 0005 / 0041 | Time 0.1s | Iter Loss 0.7047 | Iter Mean Loss 0.7088
+2023-02-10 20:59:26,509 - root - INFO - CF Training: Epoch 0001 Iter 0006 / 0041 | Time 0.1s | Iter Loss 0.6891 | Iter Mean Loss 0.7055
+2023-02-10 20:59:26,631 - root - INFO - CF Training: Epoch 0001 Iter 0007 / 0041 | Time 0.1s | Iter Loss 0.6759 | Iter Mean Loss 0.7013
+2023-02-10 20:59:26,763 - root - INFO - CF Training: Epoch 0001 Iter 0008 / 0041 | Time 0.1s | Iter Loss 0.6931 | Iter Mean Loss 0.7002
+2023-02-10 20:59:26,884 - root - INFO - CF Training: Epoch 0001 Iter 0009 / 0041 | Time 0.1s | Iter Loss 0.6832 | Iter Mean Loss 0.6984
+2023-02-10 20:59:27,016 - root - INFO - CF Training: Epoch 0001 Iter 0010 / 0041 | Time 0.1s | Iter Loss 0.6821 | Iter Mean Loss 0.6967
+2023-02-10 20:59:27,145 - root - INFO - CF Training: Epoch 0001 Iter 0011 / 0041 | Time 0.1s | Iter Loss 0.6768 | Iter Mean Loss 0.6949
+2023-02-10 20:59:27,279 - root - INFO - CF Training: Epoch 0001 Iter 0012 / 0041 | Time 0.1s | Iter Loss 0.6796 | Iter Mean Loss 0.6936
+2023-02-10 20:59:27,420 - root - INFO - CF Training: Epoch 0001 Iter 0013 / 0041 | Time 0.1s | Iter Loss 0.6808 | Iter Mean Loss 0.6926
+2023-02-10 20:59:27,542 - root - INFO - CF Training: Epoch 0001 Iter 0014 / 0041 | Time 0.1s | Iter Loss 0.6866 | Iter Mean Loss 0.6922
+2023-02-10 20:59:27,664 - root - INFO - CF Training: Epoch 0001 Iter 0015 / 0041 | Time 0.1s | Iter Loss 0.6703 | Iter Mean Loss 0.6908
+2023-02-10 20:59:27,796 - root - INFO - CF Training: Epoch 0001 Iter 0016 / 0041 | Time 0.1s | Iter Loss 0.6710 | Iter Mean Loss 0.6895
+2023-02-10 20:59:27,928 - root - INFO - CF Training: Epoch 0001 Iter 0017 / 0041 | Time 0.1s | Iter Loss 0.6670 | Iter Mean Loss 0.6882
+2023-02-10 20:59:28,047 - root - INFO - CF Training: Epoch 0001 Iter 0018 / 0041 | Time 0.1s | Iter Loss 0.6615 | Iter Mean Loss 0.6867
+2023-02-10 20:59:28,181 - root - INFO - CF Training: Epoch 0001 Iter 0019 / 0041 | Time 0.1s | Iter Loss 0.6668 | Iter Mean Loss 0.6857
+2023-02-10 20:59:28,323 - root - INFO - CF Training: Epoch 0001 Iter 0020 / 0041 | Time 0.1s | Iter Loss 0.6584 | Iter Mean Loss 0.6843
+2023-02-10 20:59:28,465 - root - INFO - CF Training: Epoch 0001 Iter 0021 / 0041 | Time 0.1s | Iter Loss 0.6654 | Iter Mean Loss 0.6834
+2023-02-10 20:59:28,597 - root - INFO - CF Training: Epoch 0001 Iter 0022 / 0041 | Time 0.1s | Iter Loss 0.6661 | Iter Mean Loss 0.6826
+2023-02-10 20:59:28,718 - root - INFO - CF Training: Epoch 0001 Iter 0023 / 0041 | Time 0.1s | Iter Loss 0.6673 | Iter Mean Loss 0.6820
+2023-02-10 20:59:28,860 - root - INFO - CF Training: Epoch 0001 Iter 0024 / 0041 | Time 0.1s | Iter Loss 0.6570 | Iter Mean Loss 0.6809
+2023-02-10 20:59:29,000 - root - INFO - CF Training: Epoch 0001 Iter 0025 / 0041 | Time 0.1s | Iter Loss 0.6523 | Iter Mean Loss 0.6798
+2023-02-10 20:59:29,123 - root - INFO - CF Training: Epoch 0001 Iter 0026 / 0041 | Time 0.1s | Iter Loss 0.6621 | Iter Mean Loss 0.6791
+2023-02-10 20:59:29,255 - root - INFO - CF Training: Epoch 0001 Iter 0027 / 0041 | Time 0.1s | Iter Loss 0.6608 | Iter Mean Loss 0.6784
+2023-02-10 20:59:29,387 - root - INFO - CF Training: Epoch 0001 Iter 0028 / 0041 | Time 0.1s | Iter Loss 0.6509 | Iter Mean Loss 0.6774
+2023-02-10 20:59:29,508 - root - INFO - CF Training: Epoch 0001 Iter 0029 / 0041 | Time 0.1s | Iter Loss 0.6432 | Iter Mean Loss 0.6762
+2023-02-10 20:59:29,640 - root - INFO - CF Training: Epoch 0001 Iter 0030 / 0041 | Time 0.1s | Iter Loss 0.6515 | Iter Mean Loss 0.6754
+2023-02-10 20:59:29,762 - root - INFO - CF Training: Epoch 0001 Iter 0031 / 0041 | Time 0.1s | Iter Loss 0.6417 | Iter Mean Loss 0.6743
+2023-02-10 20:59:29,890 - root - INFO - CF Training: Epoch 0001 Iter 0032 / 0041 | Time 0.1s | Iter Loss 0.6443 | Iter Mean Loss 0.6734
+2023-02-10 20:59:30,016 - root - INFO - CF Training: Epoch 0001 Iter 0033 / 0041 | Time 0.1s | Iter Loss 0.6447 | Iter Mean Loss 0.6725
+2023-02-10 20:59:30,158 - root - INFO - CF Training: Epoch 0001 Iter 0034 / 0041 | Time 0.1s | Iter Loss 0.6611 | Iter Mean Loss 0.6722
+2023-02-10 20:59:30,309 - root - INFO - CF Training: Epoch 0001 Iter 0035 / 0041 | Time 0.2s | Iter Loss 0.6437 | Iter Mean Loss 0.6714
+2023-02-10 20:59:30,431 - root - INFO - CF Training: Epoch 0001 Iter 0036 / 0041 | Time 0.1s | Iter Loss 0.6414 | Iter Mean Loss 0.6705
+2023-02-10 20:59:30,562 - root - INFO - CF Training: Epoch 0001 Iter 0037 / 0041 | Time 0.1s | Iter Loss 0.6369 | Iter Mean Loss 0.6696
+2023-02-10 20:59:30,691 - root - INFO - CF Training: Epoch 0001 Iter 0038 / 0041 | Time 0.1s | Iter Loss 0.6549 | Iter Mean Loss 0.6692
+2023-02-10 20:59:30,814 - root - INFO - CF Training: Epoch 0001 Iter 0039 / 0041 | Time 0.1s | Iter Loss 0.6360 | Iter Mean Loss 0.6684
+2023-02-10 20:59:30,926 - root - INFO - CF Training: Epoch 0001 Iter 0040 / 0041 | Time 0.1s | Iter Loss 0.6361 | Iter Mean Loss 0.6676
+2023-02-10 20:59:31,037 - root - INFO - CF Training: Epoch 0001 Iter 0041 / 0041 | Time 0.1s | Iter Loss 0.6331 | Iter Mean Loss 0.6667
+2023-02-10 20:59:31,037 - root - INFO - CF Training: Epoch 0001 Total Iter 0041 | Total Time 5.3s | Iter Mean Loss 0.6667
+2023-02-10 20:59:31,229 - root - INFO - KG Training: Epoch 0001 Iter 0001 / 0172 | Time 0.2s | Iter Loss 0.0000 | Iter Mean Loss 0.0000
+2023-02-10 20:59:31,402 - root - INFO - KG Training: Epoch 0001 Iter 0002 / 0172 | Time 0.2s | Iter Loss 0.0000 | Iter Mean Loss 0.0000
+2023-02-10 20:59:31,563 - root - INFO - KG Training: Epoch 0001 Iter 0003 / 0172 | Time 0.2s | Iter Loss 0.0000 | Iter Mean Loss 0.0000
+2023-02-10 20:59:31,736 - root - INFO - KG Training: Epoch 0001 Iter 0004 / 0172 | Time 0.2s | Iter Loss 0.0000 | Iter Mean Loss 0.0000
+2023-02-10 20:59:31,908 - root - INFO - KG Training: Epoch 0001 Iter 0005 / 0172 | Time 0.2s | Iter Loss 0.0000 | Iter Mean Loss 0.0000
+2023-02-10 20:59:32,070 - root - INFO - KG Training: Epoch 0001 Iter 0006 / 0172 | Time 0.2s | Iter Loss 0.0000 | Iter Mean Loss 0.0000
+2023-02-10 20:59:32,263 - root - INFO - KG Training: Epoch 0001 Iter 0007 / 0172 | Time 0.2s | Iter Loss 0.0000 | Iter Mean Loss 0.0000
+2023-02-10 20:59:32,425 - root - INFO - KG Training: Epoch 0001 Iter 0008 / 0172 | Time 0.2s | Iter Loss 0.0000 | Iter Mean Loss 0.0000
+2023-02-10 20:59:32,607 - root - INFO - KG Training: Epoch 0001 Iter 0009 / 0172 | Time 0.2s | Iter Loss 0.0000 | Iter Mean Loss 0.0000
+2023-02-10 20:59:32,780 - root - INFO - KG Training: Epoch 0001 Iter 0010 / 0172 | Time 0.2s | Iter Loss 0.0000 | Iter Mean Loss 0.0000
+2023-02-10 20:59:32,962 - root - INFO - KG Training: Epoch 0001 Iter 0011 / 0172 | Time 0.2s | Iter Loss 0.0000 | Iter Mean Loss 0.0000
+2023-02-10 20:59:33,124 - root - INFO - KG Training: Epoch 0001 Iter 0012 / 0172 | Time 0.2s | Iter Loss 0.0000 | Iter Mean Loss 0.0000
+2023-02-10 20:59:33,306 - root - INFO - KG Training: Epoch 0001 Iter 0013 / 0172 | Time 0.2s | Iter Loss 0.0000 | Iter Mean Loss 0.0000
+2023-02-10 20:59:33,488 - root - INFO - KG Training: Epoch 0001 Iter 0014 / 0172 | Time 0.2s | Iter Loss 0.0000 | Iter Mean Loss 0.0000
+2023-02-10 20:59:33,659 - root - INFO - KG Training: Epoch 0001 Iter 0015 / 0172 | Time 0.2s | Iter Loss 0.0005 | Iter Mean Loss 0.0001
+2023-02-10 20:59:33,822 - root - INFO - KG Training: Epoch 0001 Iter 0016 / 0172 | Time 0.2s | Iter Loss 0.0000 | Iter Mean Loss 0.0000
+2023-02-10 20:59:34,003 - root - INFO - KG Training: Epoch 0001 Iter 0017 / 0172 | Time 0.2s | Iter Loss 0.0000 | Iter Mean Loss 0.0000
+2023-02-10 20:59:34,165 - root - INFO - KG Training: Epoch 0001 Iter 0018 / 0172 | Time 0.2s | Iter Loss 0.0000 | Iter Mean Loss 0.0000
+2023-02-10 20:59:34,358 - root - INFO - KG Training: Epoch 0001 Iter 0019 / 0172 | Time 0.2s | Iter Loss 0.0000 | Iter Mean Loss 0.0000
+2023-02-10 20:59:34,517 - root - INFO - KG Training: Epoch 0001 Iter 0020 / 0172 | Time 0.2s | Iter Loss 0.0000 | Iter Mean Loss 0.0000
+2023-02-10 20:59:34,692 - root - INFO - KG Training: Epoch 0001 Iter 0021 / 0172 | Time 0.2s | Iter Loss 0.0000 | Iter Mean Loss 0.0000
+2023-02-10 20:59:34,873 - root - INFO - KG Training: Epoch 0001 Iter 0022 / 0172 | Time 0.2s | Iter Loss 0.0000 | Iter Mean Loss 0.0000
+2023-02-10 20:59:35,047 - root - INFO - KG Training: Epoch 0001 Iter 0023 / 0172 | Time 0.2s | Iter Loss 0.0000 | Iter Mean Loss 0.0000
+2023-02-10 20:59:35,219 - root - INFO - KG Training: Epoch 0001 Iter 0024 / 0172 | Time 0.2s | Iter Loss 0.0000 | Iter Mean Loss 0.0000
+2023-02-10 20:59:35,431 - root - INFO - KG Training: Epoch 0001 Iter 0025 / 0172 | Time 0.2s | Iter Loss 0.0000 | Iter Mean Loss 0.0000
+2023-02-10 20:59:35,613 - root - INFO - KG Training: Epoch 0001 Iter 0026 / 0172 | Time 0.2s | Iter Loss 0.0000 | Iter Mean Loss 0.0000
+2023-02-10 20:59:35,795 - root - INFO - KG Training: Epoch 0001 Iter 0027 / 0172 | Time 0.2s | Iter Loss 0.0000 | Iter Mean Loss 0.0000

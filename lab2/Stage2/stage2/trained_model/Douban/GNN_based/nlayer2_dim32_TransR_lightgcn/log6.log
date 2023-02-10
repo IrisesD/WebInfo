@@ -1,0 +1,24 @@
+2023-02-10 20:38:55,169 - root - INFO - Namespace(KG_embedding_type='TransR', Ks='[5, 10]', aggregation_type='lightgcn', cf_batch_size=1024, cf_l2loss_lambda=0.0001, cf_print_every=1, cuda=False, data_dir='data/', data_name='Douban', embed_dim=32, evaluate_every=10, gpu_id=0, kg_batch_size=2048, kg_l2loss_lambda=1e-05, kg_print_every=1, laplacian_type='random-walk', lr=0.001, mess_dropout=0.1, n_epoch=10, n_layers=2, pretrain_model_path='trained_model/GNN_based.pth', relation_dim=32, save_dir='trained_model/Douban/GNN_based/nlayer2_dim32_TransR_lightgcn', seed=2022, stopping_steps=10, test_batch_size=2048, use_pretrain=0)
+2023-02-10 20:38:55,169 - root - INFO - Running on cpu
+2023-02-10 20:39:18,459 - root - INFO - n_users:           447
+2023-02-10 20:39:18,465 - root - INFO - n_items:           578
+2023-02-10 20:39:18,465 - root - INFO - n_entities:        18134
+2023-02-10 20:39:18,465 - root - INFO - n_users_entities:  18581
+2023-02-10 20:39:18,468 - root - INFO - n_relations:       450
+2023-02-10 20:39:18,468 - root - INFO - n_cf_train:        41830
+2023-02-10 20:39:18,468 - root - INFO - n_cf_test:         10840
+2023-02-10 20:39:18,468 - root - INFO - n_kg_train:        351986
+2023-02-10 20:39:19,516 - root - INFO - GNN_based(
+  (entity_user_embed): Embedding(18581, 32)
+  (relation_embed): Embedding(450, 32)
+  (aggregator_layers): ModuleList(
+    (0): Aggregator(
+      (message_dropout): Dropout(p=0.1, inplace=False)
+      (activation): LeakyReLU(negative_slope=0.01)
+    )
+    (1): Aggregator(
+      (message_dropout): Dropout(p=0.1, inplace=False)
+      (activation): LeakyReLU(negative_slope=0.01)
+    )
+  )
+)

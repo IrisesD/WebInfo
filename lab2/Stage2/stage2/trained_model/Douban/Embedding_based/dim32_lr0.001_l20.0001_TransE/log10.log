@@ -1,0 +1,14 @@
+2023-02-10 18:59:39,617 - root - INFO - Namespace(KG_embedding_type='TransE', Ks='[5, 10]', cf_batch_size=1024, cf_l2loss_lambda=0.0001, cuda=False, data_dir='data/', data_name='Douban', embed_dim=32, evaluate_every=10, gpu_id=0, kg_batch_size=2048, kg_l2loss_lambda=0.0001, lr=0.001, n_epoch=1000, pretrain_model_path='trained_model/Embedding_based.pth', print_every=1, relation_dim=32, save_dir='trained_model/Douban/Embedding_based/dim32_lr0.001_l20.0001_TransE/', seed=2022, stopping_steps=10, test_batch_size=2048, use_pretrain=0)
+2023-02-10 18:59:54,097 - root - INFO - n_users:      447
+2023-02-10 18:59:54,097 - root - INFO - n_items:      578
+2023-02-10 18:59:54,097 - root - INFO - n_entities:   18134
+2023-02-10 18:59:54,097 - root - INFO - n_relations:  448
+2023-02-10 18:59:54,101 - root - INFO - n_cf_train:   41830
+2023-02-10 18:59:54,101 - root - INFO - n_cf_test:    10840
+2023-02-10 18:59:54,101 - root - INFO - n_kg_data:    268326
+2023-02-10 18:59:54,104 - root - INFO - Embedding_based(
+  (user_embed): Embedding(447, 32)
+  (item_embed): Embedding(578, 32)
+  (entity_embed): Embedding(18134, 32)
+  (relation_embed): Embedding(448, 32)
+)
